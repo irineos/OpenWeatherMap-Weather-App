@@ -7,7 +7,7 @@ Then you have to get an API key from [OpenWeatherMap](https://openweathermap.org
 Finally paste your API key into "apikeyfile.txt" file.
 
 # Application Screenshot
-[alt](
+[alt](https://github.com/irineos/Beginner-Weather-App/blob/main/weatherAppScreenshot.png)
 
 # Class Diagram
-[alt](
+[alt](https://github.com/irineos/Beginner-Weather-App/blob/main/classDiagram.gif)
