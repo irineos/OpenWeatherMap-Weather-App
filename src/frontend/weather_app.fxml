@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="564.0" prefWidth="489.0" style="-fx-background-color: #F8F8F8;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.WeatherAppView">
+   <children>
+      <HBox layoutX="13.0" layoutY="322.0" prefHeight="100.0" prefWidth="415.0" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="7.0">
+         <children>
+            <Label fx:id="temp_id" opacity="0.58" prefHeight="74.0" prefWidth="100.0" scaleY="1.3" text="--°" textAlignment="RIGHT" textFill="#656161">
+               <font>
+                  <Font size="44.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" right="10.0" top="20.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <VBox prefHeight="100.0" prefWidth="255.0">
+               <children>
+                  <Label fx:id="description_id" opacity="0.24" text="Description" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="21.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="cityName_id" opacity="0.56" text="City Name">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="3.0" />
+                     </padding>
+                  </Label>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </VBox>
+            <VBox prefHeight="180.0" prefWidth="118.0" style="-fx-background-color: #5297ff; -fx-background-radius: 10;" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label fx:id="day" text="--" textFill="#ebe5e5" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets left="35.0" top="17.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="month" text="---" textFill="WHITE" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="30.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </VBox>
+         </children>
+      </HBox>
+      <BorderPane prefHeight="327.0" prefWidth="479.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <ImageView fx:id="image_id" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets top="30.0" />
+               </BorderPane.margin>
+            </ImageView>
+         </center>
+         <top>
+            <AnchorPane prefHeight="77.0" prefWidth="479.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="search_id" layoutX="140.0" layoutY="29.0" onKeyPressed="#onEnter" style="-fx-background-radius: 10;" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" />
+                  <ImageView fx:id="exit_button" fitHeight="15.0" fitWidth="14.0" layoutX="468.0" layoutY="7.0" onMouseClicked="#exit" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="7.0">
+                     <image>
+                        <Image url="@../../icons/cancel.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </AnchorPane>
+         </top>
+      </BorderPane>
+      <BorderPane layoutX="16.0" layoutY="419.0" prefHeight="130.0" prefWidth="449.0" style="-fx-background-color: #cfcfcf; -fx-background-radius: 15;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+         <center>
+            <HBox BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="130.0" prefWidth="155.0">
+                     <children>
+                        <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="20.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/humidity.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="humidity_id" layoutX="85.0" layoutY="57.0" text="hum">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="130.0" prefWidth="155.0">
+                     <children>
+                        <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="20.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/pressure.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="pressure_id" layoutX="85.0" layoutY="57.0" text="pressure">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets right="15.0" />
+                     </HBox.margin>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="130.0" prefWidth="146.0">
+                     <children>
+                        <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="20.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/wind.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="wind_id" layoutX="85.0" layoutY="57.0" text="wind">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
