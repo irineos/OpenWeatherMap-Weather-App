@@ -1,4 +1,4 @@
-# Beginner-Weather-App
+# Simple Weather App
 A Simple JavaFX Weather App that uses OpenWeatherMap's API 
 
 ## Run
